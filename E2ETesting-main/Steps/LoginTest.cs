@@ -17,15 +17,15 @@ namespace E2ETesting.Steps
             await _page.FillAsync("input[name='Email']", name);
         }
 
-        //[When(@"I enter ""(.*)"" as the password")]
-        //public async Task WhenIEnterAsThePassword(string password)
-        //{
-        //    await _page.FillAsync("input[name='my-password']", password);
-        //}
+        [When(@"I enter ""(.*)"" as the password")]
+        public async Task WhenIEnterAsThePassword(string password)
+        {
+            await _page.FillAsync("input[name='Password']", password);
+        }
 
-        //[Then(@"I click on the login button")]
+        [Then(@"I click on the login button")]
 
-        public async Task IClickOnLoginButton()
+        public async Task ThenIClickOnTheLoginButton()
         {
             await _page.ClickAsync("#Login");
         }
